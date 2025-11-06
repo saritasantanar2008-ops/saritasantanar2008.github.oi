@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#justificacion">Justificación</a></li>
+                <li><a href="#marco-teorico">Marco Teórico</a></li>
+                <li><a href="#actividades">Actividades</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="inicio">
+        <div class="encabezado">
+            <div class="escudo-contenedor">
+                <img src="rosario.png" alt="escudo rosario" class="escudo-rosario">
+            </div>
+            <div class="titulo-contenedor">
+                <h1>Ética y Valores en la Democracia</h1>
+                <p class="subtitulo">Proyecto Pedagógico de aula</p>
+                <div class="autores">
+                    <span class="autor">Sara Sofía Santana</span>
+                </div>
+                <div class="institucion">
+                    <p>Colegio Del Rosario Zipaquirá</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <body>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img/ilustra.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img/etiica.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img/balanza.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+    </body>
+
+    <section id="objetivos">
+        <div class="container">
+            <h2>Objetivos</h2>
+
+            <div class="contenido-doble">
+                <div class="tarjeta">
+                    <h4>Objetivo General</h4>
+                    <p>Incentivar el aprendizaje y el buen uso de la constitución política mediante la ética, los
+                        valores y la democracia para una mejor concientización desde temprana edad, mediante actividades
+                        didácticas para estudiantes de quinto grado.</p>
+                </div>
+                <div class="tarjeta">
+                    <h4>Objetivos Específicos</h4>
+                    <ul class="lista-objetivos">
+                        <li>Organizar actividades lúdicas donde los estudiantes puedan aprender acerca de la
+                            constitución política del país</li>
+                        <li>Crear un ambiente participativo donde los estudiantes interactúen y expresen sus opiniones
+                        </li>
+                        <li>Emplear contenido audiovisual facilitando la comprensión del tema</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="justificacion">
+        <div class="container">
+            <h2>Justificación</h2>
+            <div class="tarjeta">
+                <p>Este proyecto aborda la importancia de la democracia y convivencia dentro de la sociedad,
+                    garantizando el apoyo de la constitución política y la responsabilidad que se tiene para una buena
+                    convivencia. Su finalidad es garantizar a los alumnos de quinto grado, por medio de distintas
+                    metodologías, contribuir a una sana convivencia escolar basada en el respeto, la libertad y la
+                    tolerancia.</p>
+
+                <h3>Principios Fundamentales</h3>
+                <p>La democracia representativa fomenta la participación, la responsabilidad de elegir y ser elegido,
+                    desarrollando la capacidad de liderazgo dentro de la institución educativa y favoreciendo la libre
+                    expresión, la formación de actitudes críticas y responsables.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="marco-teorico">
+        <div class="container">
+            <h2>Marco Teórico</h2>
+            <div class="contenido-doble">
+                <div class="tarjeta">
+                    <h4>Derechos Humanos</h4>
+                    <p>Los derechos humanos plantean y preservan la dignidad de todos los seres humanos. Conducen la
+                        manera en la que los individuos viven en la sociedad y se relacionan entre sí, así como sus
+                        relaciones con el estado.</p>
+                    <div class="judicial">
+                        <img src="img/judicial.jpg" class="judicial">
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <h4>Derechos de los Niños</h4>
+                    <p>Según la Convención sobre los Derechos del Niño (CDN), adoptada por la Asamblea General de las
+                        Naciones Unidas (1989), estos derechos están diseñados para asegurar que los niños puedan crecer
+                        en un entorno seguro.</p>
+                    <div class="niños">
+                        <img src="img/niños.jpg" class="niños">
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <h4>Ética y Valores</h4>
+                    <p>Son principios que sirven de guía para el comportamiento humano, ayudando a distinguir lo
+                        correcto de lo incorrecto, tanto en el ámbito individual como en todo lo relacionado con la
+                        sociedad.</p>
+                    <div class="etica">
+                        <img src="img/etiica.jpg" class="etica">
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="actividades">
+        <div class="container">
+            <h2>Plan de Actividades</h2>
+            <div class="actividades-doble">
+                <div class="tarjeta-actividad">
+                    <div class="numero-actividad">1</div>
+                    <h4>¡Alto ahí! Soy la Constitución</h4>
+                    <p><strong>Duración:</strong> Una hora</p>
+                    <p><strong>Descripción:</strong> Cada estudiante diseñará un cómic acerca de lo que piensa que es la
+                        constitución y los derechos, con un personaje representativo que guíe a través de las viñetas.
+                    </p>
+                    <p><strong>Evaluación:</strong> Resolución de problemáticas relacionadas con derechos y
+                        constitución.</p>
+                    <div class="imagen1">
+                        <img src="img/plan2.jpg" class="imagen1">
+                    </div>
+                </div>
+
+                <div class="tarjeta-actividad">
+                    <div class="numero-actividad">2</div>
+                    <h4> NUESTRA MINI REPUBLICA</h4>
+                    <p><strong>Duración:</strong> Una hora</p>
+                    <p><strong>Descripción:</strong> : se les explicara a los niños nuevamente el significado de la rama
+                        legislativa para luego dividir en dos el grupo y cada grupo hará una ley para luego debatirla,
+                        luego cada grupo expondrá su propuesta y los congresistas votan si se aprueba o no. </p>
+                    <p><strong>Evaluación:</strong> se realizará una ronda de preguntas a los estudiantes para evaluar
+                        su
+                        comprensión del tema en general
+                    </p>
+                    <div class="imagen2">
+                        <img src="img/plan1.jpg" class="imagen2">
+                    </div>
+
+                    <div class="tarjeta-actividad">
+                        <div class="numero-actividad">3</div>
+                        <h4> EL GRAN JUICIO DEL PARQUE </h4>
+                        <p><strong>Duración:</strong> Una hora</p>
+                        <p><strong>Descripción:</strong> : Los niños realizaran un juicio simulado acerca de conflicto,
+                            cada
+                            participante asume un rol judicial y, mediante el diálogo y las pruebas, buscan una solución
+                            justa al problema </p>
+                        <p><strong>Evaluación:</strong> se realizaran 5 preguntas a los niños referente a la actividad y
+                            lo que aprendieron
+                            de esta rama.
+                            l
+                        </p>
+                        <div class="imagen3">
+                            <img src="img/plan3.jpg" class="imagen3">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </section>
+
+    <div class="container">
+        <div class="ultimo">
+            <div class="agradecimiento">
+                <p>""Queremos expresar nuestro más sincero agradecimiento a la profesora Paola Garnica. Su dedicación,
+                    paciencia y orientación fueron pilares fundamentales que nos permitieron llevar a cabo este proyecto
+                    con éxito. Valoramos enormemente el tiempo que nos dedicó para resolver dudas y compartir sus
+                    conocimientos, lo cual enriqueció significativamente nuestro aprendizaje y el resultado final del
+                    trabajo"</p>
+                <p><em> SOFIA SANTANA</em></p>
+            </div>
+
+        </div>
+        </footer>
+
+
+</body>
+
+</html>
